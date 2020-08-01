@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <link rel="stylesheet" href="css/new.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+</head>
+
+<body>
+
+  <div class="container-grid" id="container">
+
+
+    <header class="header" id="header">
+
+      <div class="navBar">
+        <nav>
+          <ul id="menu">
+            <li><img class="symbol" id="audi" src="photo/audi.png" alt="audi">
+              <ul class="innerBar">
+                <li>Audi Q3</li>
+                <li>Audi R8</li>
+              </ul>
+            </li>
+            <li><img class="symbol" src="photo/BMW.png" alt="BMW">
+              <ul class="innerBar">
+                <li>BMW X5</li>
+                <li>BMW M3</li>
+              </ul>
+            </li>
+            <li><img class="symbol" src="photo/mercedes-benz.png" alt="mercedes-benz">
+              <ul class="innerBar">
+                <li>Mercedes-benz S-Class Luxury</li>
+                <li>Mercedes-benz C-Class 2017</li>
+
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+
+
+    <section class="content">content
+
+      <div class="slideshow-container">
+        <div class="mySlides fade">
+          <img class="car" src="photo/C-Class 2017.png" alt="C-Class">
+          <div class="text">C-Class</div>
+        </div>
+
+        <div class="mySlides fade">
+          <img id="aaa" class="car" src="photo/X5.png" alt="X5">
+          <div class="text">X5</div>
+        </div>
+
+        <div class="mySlides fade">
+          <img class="car" src="photo/q3.png" alt="q3">
+          <div class="text">q3</div>
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+        <div style="text-align:center">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+
+        <script>
+          var slideIndex = 1;
+          showSlides(slideIndex);
+
+          function plusSlides(n) {
+            showSlides(slideIndex += n);
+          } currentSlide
+
+          function currentSlide(n) {
+            showSlides(slideIndex = n);
+          }
+
+
+
+          function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+              dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+          }
+        </script>
+      </div>
+    </section>
+
+    <footer class="footer" id="footer">footer</footer>
+
+</body>
+
+</html>
